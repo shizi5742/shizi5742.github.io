@@ -70,7 +70,7 @@ function showDelete() {
 	document.getElementById("save").innerHTML = `<div class="row">
 	<div class="col">
 			<div class="alert alert-success" role="alert">
-					Yiu have Successfully Deleted The Book!
+					You have Successfully Deleted The Book!
 			</div>
 	</div>
 </div>`
@@ -105,12 +105,13 @@ function update(bookId, r) {
 			})
 
 		})
-		showSuccess()
+		Edited()
 	}
+	
 }
 
-function showSuccess() {
-	document.getElementById("save").innerHTML = `<div class="row">
+function Edited() {
+	document.getElementById("show").innerHTML = `<div class="row">
 	<div class="col">
 			<div class="alert alert-success" role="alert">
 					Successfully Edited !
@@ -120,7 +121,7 @@ function showSuccess() {
 
 	setTimeout(() => {
 		window.location.href = "./collection.html";
-	}, 1000)
+	}, 2000)
 
 }
 
