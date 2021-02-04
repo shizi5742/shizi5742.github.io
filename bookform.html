@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./library.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<script defer src="./bookform.js"></script>
+	<script defer src="./library.js"></script>
+	<title>New Book Form</title>
+</head>
+
+<body style="background-color:#c5f5f1;" id="me"></body>
+<h1>New Book Form</h1>
+<h5>Note: Form fields marks with asterisk(*) are required</h5>
+<form id="library-form">
+	<!-- <div class="col-md-6">
+		<label for="isbn" class="form-label">#</label>
+		<input type="text" class="form-control" id="#">
+	</div> -->
+	<div class="col-md-4 mb-3">
+		<label for="book-form">*ISBN</label>
+		<div class="input-group">
+			<div class="input-group-prepend">
+				<span class="input-group-text" id="inputGroupPrepend2">#</span>
+			</div>
+			<input type="text" class="form-control" id="isbn" aria-describedby="inputGroupPrepend2" required>
+		</div>
+	</div>
+	<div class="col-md-4 mb-3">
+		<label for="book-form">*Book Title</label>
+		<div class="input-group">
+			<div class="input-group-prepend">
+				<span class="input-group-text" id="inputGroupPrepend2">@</span>
+			</div>
+			<input type="text" class="form-control" id="book-form" aria-describedby="inputGroupPrepend2" required>
+		</div>
+	</div>
+
+	<div class="input-group mb-3">
+		<span class="input-group-text">$</span>
+		<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id="fee">
+		<span class="input-group-text">.00</span>
+
+	</div>
+	<div class="col-md-4 mb-3">
+		<label for="book-form">*Publisher</label>
+		<div class="input-group">
+			<div class="input-group-prepend">
+
+			</div>
+			<input type="text" class="form-control" id="publisher" aria-describedby="inputGroupPrepend2" required>
+		</div>
+	</div>
+	<div class="col-md-4 mb-3">
+		<label for="book-form">*Date Published</label>
+		<div class="input-group">
+			<div class="input-group-prepend">
+
+			</div>
+			<input type="date" placeholder="yyyy-mm-dd" class="form-control" id="date-published"
+				aria-describedby="inputGroupPrepend2" required>
+		</div>
+	</div>
+
+	<input type="submit" class="btn btn-outline-success" onclick="save()" value="Save Book">
+	<input type="button" class="btn btn-outline-danger" onclick="myFunction()" value="Reset form">
+</form>
+</body>
+
+</html>
