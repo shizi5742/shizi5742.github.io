@@ -67,7 +67,7 @@ const deleteData = async (deleteId) => {
 }
 
 function showDelete() {
-	document.getElementById("save").innerHTML = `<div class="row">
+	document.getElementById("show").innerHTML = `<div class="row">
 	<div class="col">
 			<div class="alert alert-success" role="alert">
 					You have Successfully Deleted The Book!
@@ -84,7 +84,7 @@ function showDelete() {
 function update(bookId, r) {
 	let id = bookId
 	console.log(response[r])
-	document.getElementById("save").innerHTML = tags
+	document.getElementById("show").innerHTML = t
 	document.getElementById('isbn').value = response[r].isbn
 	document.getElementById('book-form').value = response[r].title
 	document.getElementById('publisher').value = response[r].publisher
@@ -105,12 +105,12 @@ function update(bookId, r) {
 			})
 
 		})
-		Edited()
+		showSuccess()
 	}
 	
 }
 
-function Edited() {
+function showSuccess() {
 	document.getElementById("show").innerHTML = `<div class="row">
 	<div class="col">
 			<div class="alert alert-success" role="alert">
@@ -125,7 +125,7 @@ function Edited() {
 
 }
 
-let tags = `<body style="background-color:#c5f5f1;"></body>
+let t = `<body style="background-color:#c5f5f1;"></body>
 <h1>Update Form</h1>
 <h5>Note: Form fields marks with asterisk(*) are required</h5>
 <form id="library-form">
