@@ -17,17 +17,15 @@ function postData(event) {
 	}).then((res) => res.json())
 		.then((data) => console.log(data))
 		.catch((err) => console.log(err))
-		
+
 }
 function save() {
 	document.getElementById("library-form").addEventListener("submit", postData)
 	success()
-
 }
 
 function myFunction() {
 	document.getElementById("library-form").reset()
-
 }
 function success() {
 	document.getElementById("show").innerHTML = `<div class="row">
@@ -37,6 +35,5 @@ function success() {
 					</div>
 			</div>
 	</div>`
-	// setTimeout(() => document.querySelector("#display").remove(), 2000)
 }
 

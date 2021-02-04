@@ -51,7 +51,7 @@ function show(data) {
 }
 const deleteData = async (deleteId) => {
 	console.log(deleteId)
-	
+
 	let check = confirm("Are you sure you want to delete this book")
 	if (check) {
 		let resp = await fetch(`https://elibraryrestapi.herokuapp.com/elibrary/api/book/delete/ ${deleteId}`, {
@@ -70,13 +70,13 @@ function showDelete() {
 	document.getElementById("save").innerHTML = `<div class="row">
 	<div class="col">
 			<div class="alert alert-success" role="alert">
-					Successfully Deleted !
+					Yiu have Successfully Deleted The Book!
 			</div>
 	</div>
 </div>`
 
 	setTimeout(() => {
-			window.location.href = "./collection.html";
+		window.location.href = "./collection.html";
 	}, 2000)
 
 }
@@ -84,7 +84,7 @@ function showDelete() {
 function update(bookId, r) {
 	let id = bookId
 	console.log(response[r])
-	document.getElementById("save").innerHTML = x
+	document.getElementById("save").innerHTML = tags
 	document.getElementById('isbn').value = response[r].isbn
 	document.getElementById('book-form').value = response[r].title
 	document.getElementById('publisher').value = response[r].publisher
@@ -119,12 +119,12 @@ function showSuccess() {
 </div>`
 
 	setTimeout(() => {
-			window.location.href = "./collection.html";
+		window.location.href = "./collection.html";
 	}, 1000)
 
 }
 
-let x = `<body style="background-color:#c5f5f1;"></body>
+let tags = `<body style="background-color:#c5f5f1;"></body>
 <h1>Update Form</h1>
 <h5>Note: Form fields marks with asterisk(*) are required</h5>
 <form id="library-form">
